@@ -1,0 +1,12 @@
+%define BytesPerSector		512
+%define SectorsPerFAT		9
+%define SectorsPerCluster	1
+%define SectorsPerTrack		18
+%define ReservedSectorCount	5
+%define RootEntryCount		32
+%define NumberOfHeads		2
+%define NumberOfFAT		2
+%define NumberOfSectors		0x0b40
+
+%define RootDirSectors		((RootEntryCount*32) + (BytesPerSector-1)) / BytesPerSector
+%define FirstDataSector		ReservedSectorCount + (NumberOfFAT * SectorsPerFAT) + RootDirSectors

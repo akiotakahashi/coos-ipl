@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="shift_jis"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="makefd"
+	ProjectGUID="{9EF4EE51-65E9-4D9A-9C45-2F3F2C5FEE1A}"
+	RootNamespace="fdimage"
+	Keyword="MakeFileProj"
+	TargetFrameworkVersion="131072"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="0"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="nmake"
+				ReBuildCommandLine="nmake all"
+				CleanCommandLine="nmake clean"
+				Output="fdimage.img"
+				PreprocessorDefinitions=""
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+		<ProjectReference
+			ReferencedProjectIdentifier="{B6949322-0A78-401F-9E5D-68D617663608}"
+		/>
+	</References>
+	<Files>
+		<Filter
+			Name="ソース ファイル"
+			Filter="asm"
+			>
+			<File
+				RelativePath=".\define.mac"
+				>
+			</File>
+			<File
+				RelativePath=".\fat.asm"
+				>
+			</File>
+			<File
+				RelativePath=".\rootdirectory.asm"
+				>
+			</File>
+		</Filter>
+		<File
+			RelativePath=".\Makefile"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

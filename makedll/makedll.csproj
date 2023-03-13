@@ -1,0 +1,71 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4452E2D1-90B8-401A-8F4E-9189FA930575}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CooS</RootNamespace>
+    <AssemblyName>makedll</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formats\BadImageException.cs" />
+    <Compile Include="Formats\BadCodeException.cs" />
+    <Compile Include="Formats\DLL\Characteristics.cs" />
+    <Compile Include="Formats\DLL\CheckSum.cs" />
+    <Compile Include="Formats\DLL\COFFHeader.cs" />
+    <Compile Include="Formats\DLL\DataDir.cs" />
+    <Compile Include="Formats\DLL\DOSHeader.cs" />
+    <Compile Include="Formats\DLL\ExeSignature.cs" />
+    <Compile Include="Formats\DLL\ImageUtility.cs" />
+    <Compile Include="Formats\DLL\MachineId.cs" />
+    <Compile Include="Formats\DLL\PEHeader.cs" />
+    <Compile Include="Formats\DLL\PEImage.cs" />
+    <Compile Include="Formats\RVA.cs" />
+    <Compile Include="Formats\DLL\Section.cs" />
+    <Compile Include="Formats\DLL\SectionCharacteristics.cs" />
+    <Compile Include="Formats\DLL\Subsystem.cs" />
+    <Compile Include="Formats\GenericSources.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
